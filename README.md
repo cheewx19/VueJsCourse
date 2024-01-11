@@ -20,3 +20,4 @@ when data changed in the mounted instance
 You can also manually unmount the app instance whenever
 - beforeUnmounted => before it unmounts the app, usually where we want to do cleanup
 - unmounted => after app is unmounted
+11. A app.component is essentially another app, but belongs to a app

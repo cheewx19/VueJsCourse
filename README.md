@@ -24,7 +24,7 @@ You can also manually unmount the app instance whenever
 12. `props` are used for passing data, `slot` is used for sending html code
 
 # Slot Example
-# Component
+## Component
 Show header slot if slot is defined, otherwise hide it. Usually used if you do not have any default slots.
 ```
 <template>
@@ -42,7 +42,7 @@ You can also add default content like so:
 </template>
 ```
 
-# Base (To use Component)
+## Base (To use Component)
 ```
 <template v-slot:header>...</template>
 ```
@@ -52,7 +52,7 @@ or
 ```
 
 # Dynamic Slots
-# Component
+## Component
 ```
 <template>
   <ul>
@@ -62,7 +62,7 @@ or
 </template>
 ```
 
-# Base (To use Component)
+## Base (To use Component)
 ```
 <template #default="slotProps"><h2>{{ slotProps.item }}</h2></template>
 ```

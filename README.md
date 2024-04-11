@@ -21,3 +21,48 @@ You can also manually unmount the app instance whenever
 - beforeUnmounted => before it unmounts the app, usually where we want to do cleanup
 - unmounted => after app is unmounted
 11. A app.component is essentially another app, but belongs to a app
+12. `props` are used for passing data, `slot` is used for sending html code
+
+# Slot Example
+# Component
+Show header slot if slot is defined, otherwise hide it. Usually used if you do not have any default slots.
+```
+<template>
+<header v-if="$slots.header"><slot name='header'></slot></header>
+</template>
+```
+You can also add default content like so:
+```
+<template>
+  <header>
+    <slot name='header'>
+      <h2>Default</h2>
+    </slot>
+  </header>
+</template>
+```
+
+# Base (To use Component)
+```
+<template v-slot:header>...</template>
+```
+or
+```
+<template #header>...</template>
+```
+
+# Dynamic Slots
+# Component
+```
+<template>
+  <ul>
+    <li v-for="goal in goals" :key="goal">
+      <slot :item="goal"></slot>
+    </li>
+</template>
+```
+
+# Base (To use Component)
+```
+<template #default="slotProps"><h2>{{ slotProps.item }}</h2></template>
+```

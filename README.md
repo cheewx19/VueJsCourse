@@ -22,6 +22,7 @@ You can also manually unmount the app instance whenever
 - unmounted => after app is unmounted
 11. A app.component is essentially another app, but belongs to a app
 12. `props` are used for passing data, `slot` is used for sending html code
+13. You can use `<teleport to="">` to correct HTML structure
 
 # Slot Example
 ## Component
@@ -65,4 +66,13 @@ or
 ## Base (To use Component)
 ```
 <template #default="slotProps"><h2>{{ slotProps.item }}</h2></template>
+```
+
+# Dynamic Components
+You can define a state and use the component name for the state to dynamically show the component based on the state value.
+To make sure that the components within the parent component is cached, you can use <keep-alive> tag.
+```
+<keep-alive>
+  <component :is="component-name"></component>
+</keep-alive>
 ```

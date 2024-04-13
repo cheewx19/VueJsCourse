@@ -23,6 +23,7 @@ You can also manually unmount the app instance whenever
 11. A app.component is essentially another app, but belongs to a app
 12. `props` are used for passing data, `slot` is used for sending html code
 13. You can use `<teleport to="">` to correct HTML structure
+14. You can use `inject` and `provide` to access data from parent as a child
 
 # Slot Example
 ## Component

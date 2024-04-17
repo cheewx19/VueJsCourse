@@ -24,6 +24,7 @@ You can also manually unmount the app instance whenever
 12. `props` are used for passing data, `slot` is used for sending html code
 13. You can use `<teleport to="">` to correct HTML structure
 14. You can use `inject` and `provide` to access data from parent as a child
+15. <router-view> is a bulit in component to load routers
 
 # Slot Example
 ## Component
